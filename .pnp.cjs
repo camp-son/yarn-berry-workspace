@@ -21,11 +21,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "yarn-berry-workspace",
         "reference": "workspace:."
+      },
+      {
+        "name": "@camp-son/time",
+        "reference": "workspace:packages/time"
+      },
+      {
+        "name": "@camp-son/utility",
+        "reference": "workspace:packages/utility"
+      },
+      {
+        "name": "react-foundation",
+        "reference": "workspace:services/react-foundation"
+      },
+      {
+        "name": "react-hook",
+        "reference": "workspace:services/react-hook"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["@camp-son/time", ["workspace:packages/time"]],
+      ["@camp-son/utility", ["workspace:packages/utility"]],
+      ["react-foundation", ["workspace:services/react-foundation"]],
+      ["react-hook", ["workspace:services/react-hook"]],
       ["yarn-berry-workspace", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -35,6 +55,44 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@camp-son/time", [
+        ["workspace:packages/time", {
+          "packageLocation": "./packages/time/",
+          "packageDependencies": [
+            ["@camp-son/time", "workspace:packages/time"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@camp-son/utility", [
+        ["workspace:packages/utility", {
+          "packageLocation": "./packages/utility/",
+          "packageDependencies": [
+            ["@camp-son/utility", "workspace:packages/utility"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["react-foundation", [
+        ["workspace:services/react-foundation", {
+          "packageLocation": "./services/react-foundation/",
+          "packageDependencies": [
+            ["react-foundation", "workspace:services/react-foundation"],
+            ["@camp-son/time", "workspace:packages/time"],
+            ["@camp-son/utility", "workspace:packages/utility"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["react-hook", [
+        ["workspace:services/react-hook", {
+          "packageLocation": "./services/react-hook/",
+          "packageDependencies": [
+            ["react-hook", "workspace:services/react-hook"]
           ],
           "linkType": "SOFT",
         }]

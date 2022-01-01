@@ -1,0 +1,7 @@
+{
+  "name": "react-hook",
+  "packageManager": "yarn@3.1.0",
+  "scripts": {
+    "dev": "node src/index.js"
+  }
+}

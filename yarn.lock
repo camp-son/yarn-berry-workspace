@@ -4,6 +4,33 @@
 __metadata:
   version: 5
 
+"@camp-son/time@workspace:1.0.0, @camp-son/time@workspace:packages/time":
+  version: 0.0.0-use.local
+  resolution: "@camp-son/time@workspace:packages/time"
+  languageName: unknown
+  linkType: soft
+
+"@camp-son/utility@workspace:1.0.0, @camp-son/utility@workspace:packages/utility":
+  version: 0.0.0-use.local
+  resolution: "@camp-son/utility@workspace:packages/utility"
+  languageName: unknown
+  linkType: soft
+
+"react-foundation@workspace:services/react-foundation":
+  version: 0.0.0-use.local
+  resolution: "react-foundation@workspace:services/react-foundation"
+  dependencies:
+    "@camp-son/time": "workspace:1.0.0"
+    "@camp-son/utility": "workspace:1.0.0"
+  languageName: unknown
+  linkType: soft
+
+"react-hook@workspace:services/react-hook":
+  version: 0.0.0-use.local
+  resolution: "react-hook@workspace:services/react-hook"
+  languageName: unknown
+  linkType: soft
+
 "yarn-berry-workspace@workspace:.":
   version: 0.0.0-use.local
   resolution: "yarn-berry-workspace@workspace:."

@@ -70,3 +70,20 @@ yarn init -w
 ```
 
 `package.json`에 private과 workspace 속성이 추가가 됩니다. workspace의 루트 폴더는 기본으로 `packages`라고 생기게 됩니다.
+
+## 패키지 생성
+패키지를 추가하기 위해서 `package.json` 파일에서 `workspace`로 지정된 폴더에 패키지 폴더를 생성합니다.
+
+## 패키지 의존성
+
+## 유용한 플러그인
+`yarn workspaces` CLI를 사용하기 위해 [플러그인](https://yarnpkg.com/cli/workspaces/foreach)을 설치합니다.
+
+```
+yarn plugin import workspace-tools
+```
+
+여러 워크스페이스에 있는 스크립트를 동시에 실행시키기 위하여 사용할 수 있습니다.
+```
+yarn workspace foreach {commandName}
+```

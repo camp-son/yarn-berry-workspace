@@ -1,0 +1,6 @@
+{
+  "name": "@camp-son/utility",
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "yarn@3.1.0"
+}

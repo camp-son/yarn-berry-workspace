@@ -1,0 +1,12 @@
+{
+  "name": "react-foundation",
+  "type": "module",
+  "packageManager": "yarn@3.1.0",
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "dependencies": {
+    "@camp-son/time": "workspace:1.0.0",
+    "@camp-son/utility": "workspace:1.0.0"
+  }
+}
